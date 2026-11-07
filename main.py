@@ -2,6 +2,7 @@ import random
 import time
 from log.csv_def import WriteCsv, ResetCsv
 from log.ReadRTC import ReadRtc
+from chart.chart_def import MakeChart
 
 csv_path = "D:\\PROJECT\\Python\\Project1_DataLog\\log\\Data.csv"
 
@@ -26,5 +27,6 @@ try:
 
     #---------------Stop writing data to csv file-----------------
     print("Data logging stopped !")
+    MakeChart(csv_path)
 except KeyboardInterrupt:
     print("Data logging stopped !")
